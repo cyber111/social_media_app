@@ -1,5 +1,5 @@
 # Minimal Social media Application
-## Note: This an ongoing project please folow through for more updates
+## Note: This an ongoing project please follow through for more updates
 
 A social media practice application
 
