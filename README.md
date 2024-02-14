@@ -1,16 +1,16 @@
-# social_media_app
+# Minimal Social media Application
+## Note: This an ongoing project please folow through for more updates
 
 A social media pratice application
 
-## Getting Started
+With a login and logout feature from Firebase Email/Password
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+For now the following feature are Planned
+ - Login = Done [UI/Function]
+ - Register = Done [UI/Function]
+ - user profile = In Progress
+ - user profile edit = In Progress
+ - A user can post a post = In Progress
+ - A user can search other users = In Progress
+ - A user can change the post = In Progress
+ - A user can see the posts = In Progress
