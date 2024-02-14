@@ -1,7 +1,7 @@
 # Minimal Social media Application
 ## Note: This an ongoing project please folow through for more updates
 
-A social media pratice application
+A social media practice application
 
 With a login and logout feature from Firebase Email/Password
 
