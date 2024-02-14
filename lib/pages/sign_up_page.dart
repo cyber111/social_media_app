@@ -1,9 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:social_media_app/helper/helper_functions.dart';
 
 import '../components/my_button.dart';
 import '../components/my_text_button.dart';
 import '../components/my_text_field.dart';
-
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -18,16 +19,32 @@ class _SignUpPageState extends State<SignUpPage> {
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
 
-  void registerUser(){
+  Future<void> registerUser() async {
     //dialog loading
-    showDialog(context: context, builder: (context) => const Center(child: CircularProgressIndicator(),),);
+    showDialog(
+      context: context,
+      builder: (context) => const Center(
+        child: CircularProgressIndicator(),
+      ),
+    );
     //match passwords
-    if(passwordController.text != confirmPasswordController.text){
+    if (passwordController.text != confirmPasswordController.text) {
       Navigator.pop(context);
-
       //call a error showing method
+      displayErrorMessage('Passwords don\'t match', context);
+    } else {
+      //try creating user
+      try {
+        await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(email: emailController.text, password: passwordController.text);
+        Navigator.pop(context);
+      } on FirebaseException catch (e) {
+        //pop
+        Navigator.pop(context);
+        //error msg
+        displayErrorMessage(e.code, context);
+      }
     }
-    //try creating user
   }
 
   @override
@@ -59,15 +76,16 @@ class _SignUpPageState extends State<SignUpPage> {
             //password
             MyTextField(hintText: 'Password', textEditingController: passwordController, obscureText: true),
             //password
-            MyTextField(hintText: 'Confirm Password', textEditingController: confirmPasswordController, obscureText: true),
+            MyTextField(
+                hintText: 'Confirm Password', textEditingController: confirmPasswordController, obscureText: true),
             //Buttons
             MyButton(
+              onTap: registerUser,
               child: Text(
                 'Sign Up',
                 style: TextStyle(
                     color: Theme.of(context).colorScheme.inversePrimary, fontSize: 15, fontWeight: FontWeight.bold),
               ),
-              onTap: () {},
             ),
             const SizedBox(height: 30),
             Row(

@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:social_media_app/auth/auth.dart';
 import 'package:social_media_app/firebase_options.dart';
-import 'package:social_media_app/pages/login_page.dart';
 import 'package:social_media_app/themes/themes.dart';
 
 void main() async {
@@ -15,7 +15,7 @@ class SocialApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: const LoginPage(), theme: lightMode,);
+    return MaterialApp(home: const AuthPage(), theme: lightMode, debugShowCheckedModeBanner: false,);
   }
 }
 //ToDo: Add dark mode and light mode
