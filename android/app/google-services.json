@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1002424768367",
+    "project_id": "minimal-social-media-app-70530",
+    "storage_bucket": "minimal-social-media-app-70530.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002424768367:android:b93f49373ced4698773a9a",
+        "android_client_info": {
+          "package_name": "com.example.social_media_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB60QDzZ1iQ-10zRToIe_wzX4q8raVJIIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002424768367:android:141fb3de6f0e61a4773a9a",
+        "android_client_info": {
+          "package_name": "com.pjloginapp.login_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB60QDzZ1iQ-10zRToIe_wzX4q8raVJIIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
