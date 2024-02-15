@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -32,16 +31,16 @@ class _MyDrawerState extends State<MyDrawer> {
                 padding: const EdgeInsets.only(left: 12.0),
                 child: ListTile(
                   leading: const Icon(Icons.home),
-                  title: const Text('H O M E'),
+                  title: const Text('W A L L'),
                   onTap: () => Navigator.pop(context),
                 ),
               ),
               //Profile
               Padding(
-                padding: EdgeInsets.only(left: 12),
+                padding: const EdgeInsets.only(left: 12),
                 child: ListTile(
-                  leading: Icon(Icons.person),
-                  title: Text('P R O F I L E'),
+                  leading: const Icon(Icons.person),
+                  title: const Text('P R O F I L E'),
                   onTap: () {
                     goToPage(context, const ProfilePage());
                   },

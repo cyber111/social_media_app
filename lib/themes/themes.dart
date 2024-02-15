@@ -10,3 +10,11 @@ ThemeData lightMode = ThemeData(
   ),
 );
 
+// ThemeData lightMode = ThemeData(
+//   colorScheme: ColorScheme.fromSeed(
+//   seedColor: Colors.pink,
+//   // ···
+//   brightness: Brightness.light,
+// ),
+// );
+
