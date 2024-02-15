@@ -8,3 +8,11 @@ void displayErrorMessage(String message, BuildContext context) {
     ),
   );
 }
+
+void goToPage(BuildContext context, Widget page) {
+  Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => page,
+      ));
+}

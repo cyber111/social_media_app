@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:social_media_app/helper/helper_functions.dart';
@@ -35,15 +36,25 @@ class _SignUpPageState extends State<SignUpPage> {
     } else {
       //try creating user
       try {
-        await FirebaseAuth.instance
+        UserCredential credential = await FirebaseAuth.instance
             .createUserWithEmailAndPassword(email: emailController.text, password: passwordController.text);
-        Navigator.pop(context);
+        createUserDocument(credential);
+        if (context.mounted) Navigator.pop(context);
       } on FirebaseException catch (e) {
         //pop
-        Navigator.pop(context);
+        if (context.mounted) Navigator.pop(context);
         //error msg
-        displayErrorMessage(e.code, context);
+        if (context.mounted) displayErrorMessage(e.code, context);
       }
+    }
+  }
+
+  Future<void> createUserDocument(UserCredential? userCredential) async {
+    if (userCredential != null) {
+      await FirebaseFirestore.instance
+          .collection('Users')
+          .doc(userCredential.user!.email)
+          .set({'email': emailController.text, 'userName': userNameController.text});
     }
   }
 
