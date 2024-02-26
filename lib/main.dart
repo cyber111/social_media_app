@@ -15,7 +15,12 @@ class SocialApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: const AuthPage(), theme: lightMode, debugShowCheckedModeBanner: false,);
+    return MaterialApp(
+      home: const AuthPage(),
+      theme: lightMode,
+      darkTheme: darkMode,
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
 //ToDo: Add dark mode and light mode
