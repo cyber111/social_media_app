@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:social_media_app/components/my_drawer.dart';
-import 'package:social_media_app/components/my_text_field.dart';
+import 'package:social_media_app/components/my_text_field2.dart';
 import 'package:social_media_app/firebase/firestore.dart';
 import 'package:social_media_app/helper/helper_functions.dart';
 
@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: [
                 Expanded(
-                    child: MyTextField(
+                    child: MyTextField2(
                         hintText: 'Say something ..',
                         textEditingController: newPostTextController,
                         obscureText: false)),

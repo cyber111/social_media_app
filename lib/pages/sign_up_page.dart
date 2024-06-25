@@ -5,7 +5,7 @@ import 'package:social_media_app/helper/helper_functions.dart';
 
 import '../components/my_button.dart';
 import '../components/my_text_button.dart';
-import '../components/my_text_field.dart';
+import '../components/my_text_field2.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -81,13 +81,13 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             const SizedBox(height: 30),
             //userName
-            MyTextField(hintText: 'username', textEditingController: userNameController, obscureText: false),
+            MyTextField2(hintText: 'username', textEditingController: userNameController, obscureText: false),
             //email
-            MyTextField(hintText: 'Email', textEditingController: emailController, obscureText: false),
+            MyTextField2(hintText: 'Email', textEditingController: emailController, obscureText: false),
             //password
-            MyTextField(hintText: 'Password', textEditingController: passwordController, obscureText: true),
+            MyTextField2(hintText: 'Password', textEditingController: passwordController, obscureText: true),
             //password
-            MyTextField(
+            MyTextField2(
                 hintText: 'Confirm Password', textEditingController: confirmPasswordController, obscureText: true),
             //Buttons
             MyButton(

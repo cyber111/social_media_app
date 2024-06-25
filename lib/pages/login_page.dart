@@ -5,7 +5,7 @@ import 'package:social_media_app/pages/sign_up_page.dart';
 
 import '../components/my_button.dart';
 import '../components/my_text_button.dart';
-import '../components/my_text_field.dart';
+import '../components/my_text_field2.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -59,9 +59,9 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 30),
             //email
-            MyTextField(hintText: 'Email', textEditingController: emailController, obscureText: false),
+            MyTextField2(hintText: 'Email', textEditingController: emailController, obscureText: false),
             //password
-            MyTextField(hintText: 'Password', textEditingController: passwordController, obscureText: true),
+            MyTextField2(hintText: 'Password', textEditingController: passwordController, obscureText: true),
             //Forgot password
             Padding(
               padding: const EdgeInsets.only(right: 25.0, top: 10, bottom: 10),
